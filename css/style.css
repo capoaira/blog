@@ -1,0 +1,344 @@
+/* ======================= Global css */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 80em;
+	margin: 0 auto;
+	font-family: Roboto;
+	font-size: 1em;
+	color: #ffa500;
+	background-color: rgb(40, 40, 40);
+}
+
+a {
+	color: #ffa500;
+}
+
+li {
+	margin-left: 1em;
+}
+
+nav ul {
+	list-style: none;
+}
+
+li:hover, a:hover {
+	color: #fff;
+}
+
+/* ================= Header and Menue */
+header,
+article,
+aside,
+footer {
+	background-color: rgb(50, 50, 50);
+	border: 1px solid #000;
+}
+
+header, #content, aside, footer {
+	flex: 1 100%;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	height: 5em;
+	width: 100%;
+	white-space: nowrap;
+}
+
+header a {
+	text-decoration: none;
+}
+
+#logo a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 1em;
+}
+
+#logo a:hover {
+	color: #ffa500;
+}
+
+#logo img {
+	height: 4em;
+}
+
+#logo .logo-text {
+	padding-left: .5em;
+}
+
+#logo .logo-header {
+	font-size: 2.5em;
+}
+
+header > div {
+	margin-right: 1em;
+}
+
+/* ========================= Content*/
+#content,
+aside {
+	margin: 7em 0 2em 0;
+}
+
+aside,
+article {
+	padding: 1em;
+}
+
+aside {
+	margin-top: 0;
+}
+
+article {
+	margin-top: 1em;
+}
+
+article:nth-child(2) {
+	margin-top: 0;
+}
+
+article span {
+	margin-bottom: 1em;
+}
+
+/* Buutons und Inputs */
+/* Button und Input Aussehen für alle Seiten */
+button:not(.img_btn),
+.btn {
+    display: inline-flex;
+    width: min-content;
+    border: none;
+    border-radius: 5em;
+    padding: .5em 1em;
+    background: #ffa500;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: opacity .2s ease;
+}
+
+.img_btn {
+    height: 1em;
+    width: 1em;
+    align-self: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button img,
+.btn img {
+    margin-right: .5em;
+}
+
+button:hover,
+.btn:hover,
+.img_btn:hover {
+    opacity: .8;
+}
+
+button:hover img,
+.btn:hover img {
+    opacity: 1;
+}
+
+
+label {
+    white-space: nowrap;
+    align-self: center;
+}
+
+input,
+.passwort,
+textarea,
+select {
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: 1px solid #ffa500;
+}
+
+input:focus,
+.focus,
+textarea:focus,
+select:focus {
+    border: 2px solid #ffa500;
+}
+
+input {
+    width: 10em;
+}
+
+select {
+    min-width: 10em;
+    width: min-content;
+}
+
+input[type="number"] {
+    min-width: 5em;
+    width: 5em;
+}
+/*
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: 2em;
+    min-width: unset;
+    height: 2em;
+    border-width: 2px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background: url('/ligatabelle/img/haken.png') no-repeat;
+    background-size: 2em;
+    background-position: center;
+}
+.passwort {
+    display:flex;
+    flex-direction:row;
+    background-color: #fff;
+    width: 10em;
+    min-width: 10em;
+}
+
+.passwort label {
+    display: flex;
+}
+
+.passwort label img {
+    margin-left: -.5em;
+}
+
+.passwort input[type="password"],
+.passwort input[type="text"] {
+    flex-grow:2;
+    border: none;
+    padding: 0;
+}
+
+.passwort input:focus {
+    outline: none;
+}
+
+::-ms-reveal {
+    display: none;
+}
+*/
+select {
+    height: min-content;
+}
+
+textarea {
+    width: calc(100% - 2em);
+    height: 10em;
+}
+
+/* ========================== Footer */
+footer {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-start;
+	position: relative;
+	padding: 0 1em 1em;
+}
+
+footer span {
+	text-align:left;
+}
+
+/* ===================== Tablet view view */
+
+@media all and (min-width: 40em) {
+	body {
+		width: 80%;
+	}
+	
+	header {
+		width: 80%;
+	}
+	
+	#menu-btn, .menu-btn {
+		display: none !important;
+	}
+	
+	.menu-nav {
+		position: relative;
+		width: auto;
+		overflow: visible;
+		margin: 0 !important;
+		max-width: unset;
+	}
+	
+	.menu-nav li {
+		padding: 0 0.5em;
+	}
+	
+	.menu-list {
+		padding: 0;
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	.dropdown {
+		position: relative;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		white-space: nowrap;
+		background-color: rgb(50, 50, 50);
+		padding: 2em 1em 1em 0;
+		right: -28%;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	
+	aside {
+		margin-bottom: 5em;
+	}
+
+	footer {
+		position: fixed;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1em;
+		height: 3em;
+		width: calc(80% - 2em);
+		bottom: 0;
+	}
+	
+	/* ===================== Destop view */
+	@media all and (min-width: 70em) {
+		#content {
+			flex: 3 1 0%;
+			margin-right: 1.5em;
+			margin-bottom: 5em;
+		}
+
+		aside {
+			flex: 1 1 0%;
+			flex-direction: column;
+			margin-top: 7em;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.line {
+	display: block; 
+	border-radius: 0.25em;
+	background: #ffa500;
+	width: 3em;
+	padding: 0.28em 0;
+	margin: 0.5em 0;
+	transition: 0.3s;
+	transform-origin: right;
+}
+
+#menu-btn:checked ~ .menu-nav {
+    max-width: 90%;
+	margin-left:calc(-90% + 5em);
+}
+
+#menu-btn:checked + .menu-btn .line:nth-child(1){
+   transform: rotate(-45deg);
+}
+
+#menu-btn:checked + .menu-btn .line:nth-child(2){
+   opacity:0;
+}
+
+#menu-btn:checked + .menu-btn .line:nth-child(3){
+   transform: rotate(45deg);
+}
+
+.menu-btn {
+	display: block;
+}
+
+.menu-nav {
+	position: absolute;
+	background-color: rgb(50, 50, 50);
+    height: auto; 
+    max-width: 0;
+	width: 90%;
+    overflow: hidden;
+	margin-top: 0.5em;
+    transition: all 0.3s;
+}
+
+.menu-list {
+	padding: 0 0 1em 1em;
+	margin: 0;
+}
+
+.sublist {
+	padding-left: 0.5em;
+}

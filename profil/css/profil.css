@@ -1,0 +1,14 @@
+/* ============= Content ================================================================= */
+form {
+	margin: 0 auto 0 auto;
+	width:60%;
+}
+
+table {
+	margin: 0 auto 0 auto;
+	text-align:left;
+}
+
+td {
+	padding-left: 10px;
+}
