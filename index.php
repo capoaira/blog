@@ -1,7 +1,7 @@
 <?php
 	include('include/db-connect.php');
 	$isLogIn = isset($_SESSION['userid']);
-	$isBlogger = $_SESSION['userstatus'] == 'blogger' || $_SESSION['userstatus'] == 'admin';
+	$isBlogger = isset($_SESSION['userstatus']) && ($_SESSION['userstatus'] == 'blogger' || $_SESSION['userstatus'] == 'admin');
 ?>
 
 <!doctype html>
